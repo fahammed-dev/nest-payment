@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import { HealthDto } from './app.resolver';
 
 @Injectable()
 export class AppService {
-  getHealth(): Record<string, any> {
+  getHealth(): HealthDto {
     return {
       status: 'OK',
       message: 'Payment service is running smoothly! 💳✨',
